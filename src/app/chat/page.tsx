@@ -39,7 +39,7 @@ export default function ChatBotDemo() {
   }, [messages]);
 
   return (
-    <div className="min-h-screen relative text-white">
+    <div className="min-h-screen relative text-white cel-shading-chat">
       <FestiveBackground />
       
       <div className="relative z-10 flex flex-col h-screen pt-20">
@@ -55,17 +55,17 @@ export default function ChatBotDemo() {
               aria-live="polite"
               aria-label="Historial de conversación"
             >
-              <div className="px-4 sm:px-6 lg:px-8 pt-6">
+              <div className="px-4 sm:px-6 lg:px-8 pt-8">
                 <div className="max-w-4xl mx-auto">
-                  <div className="space-y-4 pb-4">
+                  <div className="space-y-6 pb-8">
                     {messages.length === 0 && (
                       <div className="flex items-center justify-center min-h-[50vh]">
                         <div className="text-center animate-fade-in-up">
                           <div className="text-6xl mb-4">🎭</div>
-                          <h2 className="text-2xl font-bold text-white mb-2">
+                          <h2 className="text-2xl font-bold titulo-seccion mb-2">
                             ¡Bienvenido a la Guía Verde!
                           </h2>
-                          <p className="text-white/70 max-w-md">
+                          <p className="subtitulo-seccion max-w-md">
                             Celebra el Carnaval de Negros y Blancos de manera sostenible. 
                             Pregúntame sobre reciclaje, transporte, puntos verdes y más.
                           </p>
@@ -94,10 +94,11 @@ export default function ChatBotDemo() {
               </div>
             </div>
 
-            {/* Input fijo en la parte inferior */}
-            <div className="flex-shrink-0 border-t border-white/15 bg-black/50 backdrop-blur-md px-4 sm:px-6 lg:px-8 py-4">
+            {/* Input flotante en la parte inferior */}
+            <div className="flex-shrink-0 px-4 sm:px-6 lg:px-8 py-4" style={{ background: 'transparent' }}>
               <div className="max-w-4xl mx-auto">
-                <div className="flex items-end gap-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/15 focus-within:border-emerald-400/50 transition-colors p-3">
+                <div className="floating-input-container">
+                  <div className="floating-input-area flex items-end gap-4 rounded-2xl p-4">
                   <div className="flex-1">
                     <textarea
                       value={input}
@@ -111,9 +112,9 @@ export default function ChatBotDemo() {
                         }
                       }}
                       placeholder="Pregúntame sobre sostenibilidad en el Carnaval..."
-                      className="w-full bg-transparent text-white placeholder:text-white/50 border-none outline-none resize-none rounded-lg p-2"
+                      className="floating-textarea w-full resize-none p-4 placeholder:text-gray-500"
                       rows={1}
-                      style={{ minHeight: '40px', maxHeight: '120px' }}
+                      style={{ minHeight: '50px', maxHeight: '120px' }}
                     />
                   </div>
                   <button
@@ -124,16 +125,17 @@ export default function ChatBotDemo() {
                       }
                     }}
                     disabled={!input?.trim() || status === "streaming"}
-                    className="flex-shrink-0 bg-emerald-500/15 hover:bg-emerald-500/25 disabled:bg-gray-600/20 backdrop-blur-sm border border-emerald-400/30 hover:border-emerald-400/50 disabled:border-gray-500/30 disabled:cursor-not-allowed text-white focus-visible-strong rounded-xl p-3 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+                    className="floating-send-button flex-shrink-0 disabled:bg-gray-400 disabled:border-gray-500 disabled:cursor-not-allowed text-white focus-visible-strong p-3 disabled:hover:scale-100"
                   >
                     <SendIcon className="size-4" />
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="hidden lg:block w-80 xl:w-96 border-l border-white/15 bg-black/30 backdrop-blur-sm">
+          <div className="hidden lg:block w-80 xl:w-96 cel-sidebar p-2">
             <EcoAside onPickTopic={handlePickTopic} />
           </div>
         </div>

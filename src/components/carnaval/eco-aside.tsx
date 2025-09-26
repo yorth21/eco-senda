@@ -25,34 +25,34 @@ export const EcoAside = ({ onPickTopic }: EcoAsideProps) => {
   ];
 
   return (
-    <aside className="space-y-6 p-4">
+    <aside className="space-y-6 p-6">
       {/* Eco-Tips rápidos */}
-      <Card className="bg-white/5 border-white/15 backdrop-blur-sm hover:bg-white/10 transition-colors">
+      <Card className="cel-card">
         <CardHeader className="pb-3">
-          <CardTitle className="text-emerald-400 flex items-center gap-2 text-lg">
+          <CardTitle className="text-emerald-800 flex items-center gap-2 text-lg font-bold">
             <Leaf className="h-5 w-5" />
             Eco-Tips Rápidos
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-2">
+        <CardContent className="space-y-3">
           {ecoTips.map((tip) => (
-            <div key={tip} className="flex items-start gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
-              <p className="text-sm text-white/80 leading-relaxed">{tip}</p>
+            <div key={tip} className="flex items-start gap-3">
+              <div className="w-2 h-2 rounded-full bg-emerald-700 mt-2 flex-shrink-0" />
+              <p className="text-sm leading-relaxed font-medium text-gray-800">{tip}</p>
             </div>
           ))}
         </CardContent>
       </Card>
 
       {/* Temas populares */}
-      <Card className="bg-white/5 border-white/15 backdrop-blur-sm hover:bg-white/10 transition-colors">
+      <Card className="cel-card">
         <CardHeader className="pb-3">
-          <CardTitle className="text-fuchsia-400 flex items-center gap-2 text-lg">
+          <CardTitle className="text-fuchsia-800 flex items-center gap-2 text-lg font-bold">
             <Sparkles className="h-5 w-5" />
             Temas Populares
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-2">
+        <CardContent className="space-y-3">
           {popularTopics.map((item) => {
             const Icon = item.icon;
             return (
@@ -61,10 +61,10 @@ export const EcoAside = ({ onPickTopic }: EcoAsideProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => onPickTopic(item.topic)}
-                className="w-full justify-start text-left h-auto p-3 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all group"
+                className="w-full justify-start text-left h-auto p-4 hover:bg-white/30 border border-gray-300 hover:border-gray-400 transition-all group rounded-lg"
               >
-                <Icon className="h-4 w-4 mr-2 text-white/60 group-hover:text-white/80 transition-colors" />
-                <span className="text-sm text-white/80 group-hover:text-white transition-colors">
+                <Icon className="h-5 w-5 mr-3 text-gray-700 group-hover:text-gray-900 transition-colors" />
+                <span className="text-sm font-medium text-gray-800 group-hover:text-gray-900 transition-all">
                   {item.topic}
                 </span>
               </Button>
@@ -73,44 +73,44 @@ export const EcoAside = ({ onPickTopic }: EcoAsideProps) => {
         </CardContent>
       </Card>
 
-      <Separator className="bg-white/15" />
+      <Separator className="bg-gray-200" />
 
       {/* Créditos culturales */}
-      <Card className="bg-white/5 border-white/15 backdrop-blur-sm hover:bg-white/10 transition-colors">
+      <Card className="cel-card">
         <CardHeader className="pb-3">
-          <CardTitle className="text-yellow-400 flex items-center gap-2 text-lg">
+          <CardTitle className="text-yellow-800 flex items-center gap-2 text-lg font-bold">
             <Users className="h-5 w-5" />
             Cultura & Tradición
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          <p className="text-sm text-white/80 leading-relaxed">
-            El <strong className="text-white">Carnaval de Negros y Blancos</strong> es 
+          <p className="text-sm leading-relaxed font-medium text-gray-800">
+            El <strong className="text-gray-900">Carnaval de Negros y Blancos</strong> es 
             Patrimonio Cultural Inmaterial de la Humanidad (UNESCO).
           </p>
           
           <div className="flex flex-wrap gap-2">
             <Badge 
               variant="outline" 
-              className="border-yellow-400/30 text-yellow-300 bg-yellow-400/10"
+              className="border-yellow-500 text-yellow-700 bg-yellow-50"
             >
               Tradición
             </Badge>
             <Badge 
               variant="outline" 
-              className="border-fuchsia-400/30 text-fuchsia-300 bg-fuchsia-400/10"
+              className="border-fuchsia-500 text-fuchsia-700 bg-fuchsia-50"
             >
               Cultura
             </Badge>
             <Badge 
               variant="outline" 
-              className="border-teal-400/30 text-teal-300 bg-teal-400/10"
+              className="border-teal-500 text-teal-700 bg-teal-50"
             >
               Diversidad
             </Badge>
           </div>
           
-          <p className="text-xs text-white/60 leading-relaxed">
+          <p className="text-xs leading-relaxed font-medium text-gray-700">
             Celebremos de manera responsable, preservando nuestra tradición y 
             nuestro medio ambiente para futuras generaciones.
           </p>

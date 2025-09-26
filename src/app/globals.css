@@ -508,4 +508,180 @@
   .scrollbar-track-transparent::-webkit-scrollbar-track {
     background: transparent;
   }
+
+  /* Cel Shading Styles */
+  .cel-shading-chat {
+    position: relative;
+  }
+
+  .cel-message-user {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 3px solid #065f46;
+    box-shadow: 
+      4px 4px 0px #065f46,
+      8px 8px 0px rgba(6, 95, 70, 0.3);
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .cel-message-assistant {
+    background: linear-gradient(135deg, #e5e0c3 0%, #d6d1b4 100%);
+    border: 3px solid #8b7355;
+    box-shadow: 
+      4px 4px 0px #8b7355,
+      8px 8px 0px rgba(139, 115, 85, 0.3);
+    color: #291700;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+  }
+
+  .cel-input-area {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 4px solid #291700;
+    box-shadow: 
+      6px 6px 0px #291700,
+      12px 12px 0px rgba(41, 23, 0, 0.3);
+    filter: contrast(1.1);
+  }
+
+  .floating-input-container {
+    position: relative;
+    margin: 16px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 24px;
+    transition: all 0.2s ease;
+  }
+
+  .floating-input-area {
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    box-shadow: none;
+    filter: none;
+  }
+
+  .floating-textarea {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 4px solid #291700;
+    border-radius: 16px;
+    box-shadow: 
+      6px 6px 0px #291700,
+      12px 12px 0px rgba(41, 23, 0, 0.3);
+    transition: all 0.2s ease;
+    filter: contrast(1.1);
+    color: #291700;
+    font-weight: 500;
+  }
+
+  .floating-textarea:hover {
+    box-shadow: 
+      8px 8px 0px #291700,
+      14px 14px 0px rgba(41, 23, 0, 0.3);
+    border-color: #059669;
+  }
+
+  .floating-textarea:focus {
+    outline: none;
+    box-shadow: 
+      8px 8px 0px #059669,
+      14px 14px 0px rgba(5, 150, 105, 0.3);
+    border-color: #059669;
+  }
+
+  .cel-button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 3px solid #065f46;
+    box-shadow: 
+      3px 3px 0px #065f46,
+      6px 6px 0px rgba(6, 95, 70, 0.3);
+    transition: all 0.1s ease;
+    transform: translateY(0px);
+  }
+
+  .cel-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      5px 5px 0px #065f46,
+      10px 10px 0px rgba(6, 95, 70, 0.3);
+  }
+
+  .cel-button:active {
+    transform: translateY(1px);
+    box-shadow: 
+      2px 2px 0px #065f46,
+      4px 4px 0px rgba(6, 95, 70, 0.3);
+  }
+
+  .floating-send-button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 3px solid #065f46;
+    border-radius: 16px;
+    box-shadow: 
+      4px 4px 0px #065f46,
+      8px 8px 0px rgba(6, 95, 70, 0.3);
+    transition: all 0.2s ease;
+    transform: translateY(0px);
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating-send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      6px 6px 0px #065f46,
+      12px 12px 0px rgba(6, 95, 70, 0.3);
+    border-color: #065f46;
+  }
+
+  .floating-send-button:active {
+    transform: translateY(1px);
+    box-shadow: 
+      2px 2px 0px #065f46,
+      4px 4px 0px rgba(6, 95, 70, 0.3);
+  }
+
+  .cel-sidebar {
+    background: linear-gradient(180deg, #e5e0c3 0%, #d6d1b4 100%);
+    border-left: 4px solid #8b7355;
+    filter: contrast(1.1) saturate(1.2);
+  }
+
+  .cel-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 3px solid #8b7355;
+    box-shadow: 
+      4px 4px 0px #8b7355,
+      8px 8px 0px rgba(139, 115, 85, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .cel-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+      6px 6px 0px #8b7355,
+      12px 12px 0px rgba(139, 115, 85, 0.3);
+  }
+
+  @keyframes cel-bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translateY(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05) translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+    }
+  }
+
+  .animate-cel-bounce {
+    animation: cel-bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
 }

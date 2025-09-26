@@ -66,15 +66,15 @@ export const CarnavalMessage = ({ role, children, className }: CarnavalMessagePr
       className
     )}>
       <div className={cn(
-        "max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 shadow-lg backdrop-blur-sm transition-all duration-200 hover:shadow-xl relative",
+        "max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 relative animate-cel-bounce",
         isUser 
-          ? "bg-emerald-500/15 text-white border border-emerald-400/30 backdrop-blur-sm" 
-          : "bg-white/10 text-white border border-white/15"
+          ? "cel-message-user" 
+          : "cel-message-assistant"
       )}>
         {/* Indicador de rol */}
         <div className={cn(
-          "text-xs font-medium mb-2 opacity-70",
-          isUser ? "text-white/80" : "text-white/60"
+          "text-xs font-bold mb-2",
+          isUser ? "text-white/90" : "text-amber-700"
         )}>
           {isUser ? "Tú" : "Guía Verde"}
         </div>
@@ -82,7 +82,9 @@ export const CarnavalMessage = ({ role, children, className }: CarnavalMessagePr
         {/* Contenido renderizado por ai-elements */}
         <div className={cn(
           "prose prose-sm max-w-none",
-          isUser ? "prose-invert" : "prose-invert prose-headings:text-white prose-p:text-white/90 prose-strong:text-white prose-code:text-white/80"
+          isUser 
+            ? "prose-invert prose-headings:text-white prose-p:text-white prose-strong:text-white prose-code:text-white/90" 
+            : "prose-headings:text-amber-900 prose-p:text-gray-800 prose-strong:text-gray-900 prose-code:text-amber-800"
         )}>
           {children}
         </div>
