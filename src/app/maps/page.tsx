@@ -131,14 +131,19 @@ export default function MapsPage() {
               <div className="lg:col-span-2">
                 <Card className="card-cultural h-[500px] lg:h-[600px]">
                   <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg">
-                        📍 Centro de Pasto
-                      </CardTitle>
-                      <p className="text-sm opacity-80">
-                        Haz clic en los puntos para ver detalles
-                      </p>
-                    </div>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-lg">
+                  📍 Centro de Pasto
+                </CardTitle>
+                <div className="text-right">
+                  <p className="text-sm opacity-80">
+                    Haz clic en los puntos para ver detalles
+                  </p>
+                  <p className="text-xs text-red-600 font-medium">
+                    🎭 Ruta oficial del Carnaval
+                  </p>
+                </div>
+              </div>
                   </CardHeader>
                   <CardContent className="p-6 pt-0 h-full">
                     <div className="h-full -mt-3">
@@ -154,6 +159,61 @@ export default function MapsPage() {
 
               {/* Sidebar con información */}
               <div className="space-y-6">
+                {/* Información de la ruta del Carnaval */}
+                <Card className="card-cultural">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      🎭 Ruta Oficial del Carnaval
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-sm">
+                      <strong>Recorrido único:</strong> La línea roja marca el recorrido oficial del Carnaval de Negros y Blancos por las calles principales de Pasto.
+                    </p>
+                    
+                    <div className="space-y-2 text-xs">
+                      <div className="font-bold text-gray-800">📍 Recorrido completo:</div>
+                      <div className="space-y-1 opacity-80">
+                        <div>🚩 <strong>Inicio:</strong> Avenida Mijitayo</div>
+                        <div>🛣️ <strong>Ruta:</strong> Carrera 26 → Calle 17</div>
+                        <div>🎭 <strong>Centro:</strong> Plaza del Carnaval</div>
+                        <div>🏫 <strong>Paso:</strong> Colegio Champagnat</div>
+                        <div>🏟️ <strong>Final:</strong> Coliseo Libertad</div>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div className="flex items-center gap-1">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span>Inicio</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <span>Final</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-3 h-1 bg-red-600"></div>
+                        <span>Ruta</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span>Comercios</span>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 text-xs">
+                      <div className="font-bold text-blue-700 mb-1">🛍️ Puntos Comerciales</div>
+                      <div className="text-blue-600">
+                        Encuentra centros comerciales, supermercados y restaurantes cerca de la ruta del Carnaval
+                      </div>
+                    </div>
+                    
+                    <p className="text-xs opacity-80">
+                      🎪 Haz clic en los marcadores azules para ver detalles de los comercios cercanos
+                    </p>
+                  </CardContent>
+                </Card>
+
                 {/* Punto seleccionado */}
                 {selectedPoint ? (
                   <Card className="card-cultural">
