@@ -781,6 +781,55 @@
       font-size: 1.25rem;
     }
 
+    /* Floating Assistant Styles */
+    .cel-floating-assistant {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    }
+
+    .cel-floating-assistant:hover {
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+    }
+
+    .cel-floating-assistant:active {
+      transform: scale(0.95);
+    }
+
+    /* Floating message animation */
+    @keyframes float-in {
+      0% {
+        transform: translateY(20px) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-5px) scale(1.05);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .animate-float-in {
+      animation: float-in 0.6s ease-out;
+    }
+
+    /* Breathing effect for assistant */
+    @keyframes breathe {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .animate-breathe {
+      animation: breathe 3s ease-in-out infinite;
+    }
+
   .cel-sidebar {
     background: linear-gradient(180deg, #e5e0c3 0%, #d6d1b4 100%);
     border-left: 4px solid #8b7355;

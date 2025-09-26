@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronRightIcon, LeafIcon, RecycleIcon, UsersIcon, SparklesIcon, TrophyIcon } from "lucide-react";
 import { CarnavalHeader } from "@/components/carnaval/header";
 import { FestiveBackground } from "@/components/carnaval/festive-background";
+import { FloatingAssistant } from "@/components/carnaval/floating-assistant";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -241,6 +242,9 @@ export default function LandingPage() {
           </div>
         </footer>
       </div>
+
+      {/* Asistente flotante */}
+      <FloatingAssistant />
     </div>
   );
 }
