@@ -124,7 +124,7 @@ export default function ChatBotDemo() {
                       }
                     }}
                     disabled={!input?.trim() || status === "streaming"}
-                    className="flex-shrink-0 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white border-0 focus-visible-strong rounded-xl p-3 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+                    className="flex-shrink-0 bg-emerald-500/15 hover:bg-emerald-500/25 disabled:bg-gray-600/20 backdrop-blur-sm border border-emerald-400/30 hover:border-emerald-400/50 disabled:border-gray-500/30 disabled:cursor-not-allowed text-white focus-visible-strong rounded-xl p-3 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
                   >
                     <SendIcon className="size-4" />
                   </button>

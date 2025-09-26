@@ -72,7 +72,7 @@ export default function LandingPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link href="/chat">
-                  <Button className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0 text-lg px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 shadow-2xl">
+                  <Button className="bg-emerald-500/15 hover:bg-emerald-500/25 backdrop-blur-sm border border-emerald-400/30 hover:border-emerald-400/50 text-white text-lg px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 shadow-2xl">
                     Comenzar Chat Verde
                     <ChevronRightIcon className="ml-2 h-5 w-5" />
                   </Button>
@@ -165,7 +165,7 @@ export default function LandingPage() {
                   transporte, puntos verdes y más consejos para disfrutar responsablemente.
                 </p>
                 <Link href="/chat">
-                  <Button className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0 text-lg px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 shadow-2xl">
+                  <Button className="bg-emerald-500/15 hover:bg-emerald-500/25 backdrop-blur-sm border border-emerald-400/30 hover:border-emerald-400/50 text-white text-lg px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 shadow-2xl">
                     Iniciar Conversación Verde
                     <ChevronRightIcon className="ml-2 h-5 w-5" />
                   </Button>

@@ -18,13 +18,13 @@ export const MessageBubble = ({ role, content, className }: MessageBubbleProps) 
       <div className={cn(
         "max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 shadow-lg backdrop-blur-sm transition-all duration-200 hover:shadow-xl",
         isUser 
-          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white border border-emerald-300/20 ml-auto" 
+          ? "bg-emerald-500/15 text-white border border-emerald-400/30 backdrop-blur-sm ml-auto" 
           : "bg-white/10 text-white border border-white/15 mr-auto"
       )}>
         {/* Indicador de rol */}
         <div className={cn(
           "text-xs font-medium mb-1 opacity-70",
-          isUser ? "text-emerald-100" : "text-white/60"
+          isUser ? "text-white/80" : "text-white/60"
         )}>
           {isUser ? "Tú" : "Guía Verde"}
         </div>
@@ -41,7 +41,7 @@ export const MessageBubble = ({ role, content, className }: MessageBubbleProps) 
         <div className={cn(
           "absolute w-2 h-2 transform rotate-45",
           isUser 
-            ? "bg-emerald-500 -bottom-1 -right-1" 
+            ? "bg-emerald-400/20 -bottom-1 -right-1" 
             : "bg-white/10 -bottom-1 -left-1"
         )} />
       </div>
@@ -68,13 +68,13 @@ export const CarnavalMessage = ({ role, children, className }: CarnavalMessagePr
       <div className={cn(
         "max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 shadow-lg backdrop-blur-sm transition-all duration-200 hover:shadow-xl relative",
         isUser 
-          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white border border-emerald-300/20" 
+          ? "bg-emerald-500/15 text-white border border-emerald-400/30 backdrop-blur-sm" 
           : "bg-white/10 text-white border border-white/15"
       )}>
         {/* Indicador de rol */}
         <div className={cn(
           "text-xs font-medium mb-2 opacity-70",
-          isUser ? "text-emerald-100" : "text-white/60"
+          isUser ? "text-white/80" : "text-white/60"
         )}>
           {isUser ? "Tú" : "Guía Verde"}
         </div>
