@@ -617,31 +617,36 @@
 
   .floating-send-button {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    border: 3px solid #065f46;
-    border-radius: 16px;
+    border: 2px solid #065f46;
+    border-radius: 12px;
     box-shadow: 
-      4px 4px 0px #065f46,
-      8px 8px 0px rgba(6, 95, 70, 0.3);
+      2px 2px 0px #065f46,
+      4px 4px 0px rgba(6, 95, 70, 0.3);
     transition: all 0.2s ease;
     transform: translateY(0px);
     color: white;
     font-weight: 600;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .floating-send-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 
-      6px 6px 0px #065f46,
-      12px 12px 0px rgba(6, 95, 70, 0.3);
+      3px 3px 0px #065f46,
+      6px 6px 0px rgba(6, 95, 70, 0.3);
     border-color: #065f46;
   }
 
   .floating-send-button:active {
-    transform: translateY(1px);
+    transform: translateY(0px);
     box-shadow: 
-      2px 2px 0px #065f46,
-      4px 4px 0px rgba(6, 95, 70, 0.3);
+      1px 1px 0px #065f46,
+      2px 2px 0px rgba(6, 95, 70, 0.3);
   }
 
   .cel-sidebar {

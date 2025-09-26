@@ -98,8 +98,7 @@ export default function ChatBotDemo() {
             <div className="flex-shrink-0 px-4 sm:px-6 lg:px-8 py-4" style={{ background: 'transparent' }}>
               <div className="max-w-4xl mx-auto">
                 <div className="floating-input-container">
-                  <div className="floating-input-area flex items-end gap-4 rounded-2xl p-4">
-                  <div className="flex-1">
+                  <div className="floating-input-area relative">
                     <textarea
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
@@ -112,23 +111,22 @@ export default function ChatBotDemo() {
                         }
                       }}
                       placeholder="Pregúntame sobre sostenibilidad en el Carnaval..."
-                      className="floating-textarea w-full resize-none p-4 placeholder:text-gray-500"
+                      className="floating-textarea w-full resize-none p-4 pr-14 placeholder:text-gray-500"
                       rows={1}
                       style={{ minHeight: '50px', maxHeight: '120px' }}
                     />
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (input.trim()) {
-                        handleSubmit({ text: input });
-                      }
-                    }}
-                    disabled={!input?.trim() || status === "streaming"}
-                    className="floating-send-button flex-shrink-0 disabled:bg-gray-400 disabled:border-gray-500 disabled:cursor-not-allowed text-white focus-visible-strong p-3 disabled:hover:scale-100"
-                  >
-                    <SendIcon className="size-4" />
-                  </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (input.trim()) {
+                          handleSubmit({ text: input });
+                        }
+                      }}
+                      disabled={!input?.trim() || status === "streaming"}
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 floating-send-button disabled:bg-gray-400 disabled:border-gray-500 disabled:cursor-not-allowed text-white focus-visible-strong p-2 disabled:hover:scale-100"
+                    >
+                      <SendIcon className="size-4" />
+                    </button>
                   </div>
                 </div>
               </div>
