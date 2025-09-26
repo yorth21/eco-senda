@@ -66,16 +66,20 @@ export default function LoginPage() {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
               <Link href="/">
-                <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  className="bg-white/90 hover:bg-white text-[#291700] border-2 border-[#291700] hover:border-black font-bold shadow-lg transition-all duration-200 hover:scale-105 rounded-lg"
+                >
                   <ArrowLeftIcon className="h-4 w-4 mr-2" />
                   Volver
                 </Button>
               </Link>
               <div>
-                <h1 className="text-3xl font-bold text-white">
+                <h1 className="text-3xl font-bold titulo-seccion">
                   Iniciar Sesión
                 </h1>
-                <p className="text-white/70">
+                <p className="subtitulo-seccion">
                   Accede a tu cuenta de Eco Senda
                 </p>
               </div>
@@ -87,15 +91,15 @@ export default function LoginPage() {
           <div className="max-w-md mx-auto">
             
             {/* Formulario de Login */}
-            <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+            <Card className="card-cultural">
               <CardHeader className="text-center pb-6">
                 <div className="mx-auto mb-4 p-4 rounded-full bg-emerald-500/20 backdrop-blur-sm w-fit">
-                  <UserIcon className="h-8 w-8 text-emerald-400" />
+                  <UserIcon className="h-8 w-8 text-emerald-600" />
                 </div>
-                <CardTitle className="text-white text-xl">
+                <CardTitle className="text-xl">
                   Bienvenido de vuelta 🎭
                 </CardTitle>
-                <p className="text-white/70 text-sm">
+                <p className="text-sm">
                   Ingresa tus credenciales para continuar
                 </p>
               </CardHeader>
@@ -103,10 +107,10 @@ export default function LoginPage() {
               <CardContent className="space-y-6">
                 {/* Credenciales de prueba */}
                 <div className="bg-emerald-500/10 border border-emerald-400/30 rounded-xl p-4">
-                  <p className="text-emerald-300 text-sm font-medium mb-2">
+                  <p className="text-emerald-700 text-sm font-medium mb-2">
                     🧪 Credenciales de prueba:
                   </p>
-                  <div className="space-y-1 text-xs text-white/70">
+                  <div className="space-y-1 text-xs text-emerald-800">
                     <p><strong>Email:</strong> codejam@gmail.com</p>
                     <p><strong>Contraseña:</strong> codejam123</p>
                   </div>
@@ -115,12 +119,12 @@ export default function LoginPage() {
                 <form onSubmit={handleLogin} className="space-y-4">
                   {/* Email */}
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-white text-sm font-medium">
+                    <label htmlFor="email" className="text-sm font-medium">
                       Correo electrónico
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <UserIcon className="h-4 w-4 text-white/50" />
+                        <UserIcon className="h-4 w-4 text-gray-500" />
                       </div>
                       <Input
                         id="email"
@@ -128,7 +132,7 @@ export default function LoginPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="tu@email.com"
-                        className="bg-white/5 border-white/15 text-white placeholder-white/50 pl-10 focus:border-emerald-400/50 focus:ring-emerald-400/20"
+                        className="bg-white border-2 border-black text-gray-900 placeholder-gray-500 pl-10 focus:border-emerald-500 focus:ring-emerald-500"
                         required
                       />
                     </div>
@@ -136,12 +140,12 @@ export default function LoginPage() {
 
                   {/* Password */}
                   <div className="space-y-2">
-                    <label htmlFor="password" className="text-white text-sm font-medium">
+                    <label htmlFor="password" className="text-sm font-medium">
                       Contraseña
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <LockIcon className="h-4 w-4 text-white/50" />
+                        <LockIcon className="h-4 w-4 text-gray-500" />
                       </div>
                       <Input
                         id="password"
@@ -149,13 +153,13 @@ export default function LoginPage() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="••••••••"
-                        className="bg-white/5 border-white/15 text-white placeholder-white/50 pl-10 pr-10 focus:border-emerald-400/50 focus:ring-emerald-400/20"
+                        className="bg-white border-2 border-black text-gray-900 placeholder-gray-500 pl-10 pr-10 focus:border-emerald-500 focus:ring-emerald-500"
                         required
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-white/50 hover:text-white/70"
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-400"
                       >
                         {showPassword ? (
                           <EyeOffIcon className="h-4 w-4" />
@@ -168,8 +172,8 @@ export default function LoginPage() {
 
                   {/* Error Message */}
                   {error && (
-                    <div className="bg-red-500/10 border border-red-400/30 rounded-xl p-3">
-                      <p className="text-red-300 text-sm">{error}</p>
+                    <div className="bg-red-50 border border-red-200 rounded-xl p-3">
+                      <p className="text-red-700 text-sm font-medium">{error}</p>
                     </div>
                   )}
 
@@ -177,7 +181,7 @@ export default function LoginPage() {
                   <Button
                     type="submit"
                     disabled={isLoading || !email || !password}
-                    className="w-full bg-emerald-500/15 hover:bg-emerald-500/25 disabled:bg-gray-600/20 backdrop-blur-sm border border-emerald-400/30 hover:border-emerald-400/50 disabled:border-gray-500/30 disabled:cursor-not-allowed text-white focus-visible-strong rounded-xl py-3 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 border-2 border-emerald-800 hover:border-emerald-900 disabled:border-gray-500 disabled:cursor-not-allowed text-white font-bold rounded-xl py-4 transition-all duration-200 hover:scale-105 disabled:hover:scale-100 shadow-lg hover:shadow-xl"
                   >
                     {isLoading ? (
                       <div className="flex items-center gap-2">
@@ -196,7 +200,7 @@ export default function LoginPage() {
                     <div className="w-full border-t border-white/15"></div>
                   </div>
                   <div className="relative flex justify-center text-xs">
-                    <span className="bg-black px-2 text-white/50">o continúa con</span>
+                    <span className="bg-[#e5e0c3] px-2 text-sm opacity-80">o continúa con</span>
                   </div>
                 </div>
 
@@ -205,12 +209,12 @@ export default function LoginPage() {
                   <Button
                     type="button"
                     variant="outline"
-                    className="w-full bg-white/5 border-white/15 text-white hover:bg-white/10 backdrop-blur-sm"
+                    className="w-full bg-gray-50 border-gray-200 hover:bg-gray-100 text-gray-600 text-sm"
                     disabled
                   >
                     🌟 Invitado del Carnaval
                   </Button>
-                  <p className="text-white/50 text-xs text-center">
+                  <p className="text-xs text-center opacity-60">
                     (Próximamente: Login social)
                   </p>
                 </div>
@@ -227,9 +231,9 @@ export default function LoginPage() {
                   #CarnavalDigital
                 </Badge>
               </div>
-              <p className="text-white/50 text-sm">
+              <p className="text-sm opacity-80">
                 ¿No tienes cuenta?{" "}
-                <Link href="/register" className="text-emerald-400 hover:text-emerald-300 underline">
+                <Link href="/register" className="text-emerald-600 hover:text-emerald-500 underline font-medium">
                   Regístrate aquí
                 </Link>
               </p>
