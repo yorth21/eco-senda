@@ -102,16 +102,20 @@ export default function MapsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
               <Link href="/">
-                <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  className="bg-white/90 hover:bg-white text-blue-700 border-2 border-white hover:border-blue-200 font-bold shadow-lg transition-all duration-200 hover:scale-105"
+                >
                   <ArrowLeftIcon className="h-4 w-4 mr-2" />
                   Volver
                 </Button>
               </Link>
               <div>
-                <h1 className="text-3xl font-bold text-white">
+                <h1 className="text-3xl font-bold titulo-seccion">
                   Mapa de Reciclaje
                 </h1>
-                <p className="text-white/70">
+                <p className="subtitulo-seccion">
                   Puntos de reciclaje para el Carnaval de Negros y Blancos
                 </p>
               </div>
@@ -125,13 +129,13 @@ export default function MapsPage() {
               
               {/* Mapa */}
               <div className="lg:col-span-2">
-                <Card className="bg-white/5 border-white/15 backdrop-blur-sm h-[500px] lg:h-[600px]">
+                <Card className="card-cultural h-[500px] lg:h-[600px]">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <CardTitle className="text-white text-lg">
+                      <CardTitle className="text-lg">
                         📍 Centro de Pasto
                       </CardTitle>
-                      <p className="text-white/70 text-sm">
+                      <p className="text-sm opacity-80">
                         Haz clic en los puntos para ver detalles
                       </p>
                     </div>
@@ -152,21 +156,21 @@ export default function MapsPage() {
               <div className="space-y-6">
                 {/* Punto seleccionado */}
                 {selectedPoint ? (
-                  <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+                  <Card className="card-cultural">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className={`w-4 h-4 rounded-full ${selectedPoint.color}`}></div>
                         <div>
-                          <CardTitle className="text-white">{selectedPoint.name}</CardTitle>
-                          <p className="text-white/60 text-sm">{selectedPoint.type}</p>
+                          <CardTitle>{selectedPoint.name}</CardTitle>
+                          <p className="text-sm opacity-80">{selectedPoint.type}</p>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <p className="text-white/80 text-sm">{selectedPoint.description}</p>
+                      <p className="text-sm">{selectedPoint.description}</p>
                       
                       <div>
-                        <p className="text-white font-medium mb-2">Materiales aceptados:</p>
+                        <p className="font-medium mb-2">Materiales aceptados:</p>
                         <div className="flex flex-wrap gap-2">
                           {selectedPoint.materials.map((material) => {
                             const Icon = materialIcons[material as keyof typeof materialIcons] || RecycleIcon;
@@ -184,19 +188,19 @@ export default function MapsPage() {
                       </div>
                       
                       <div className="pt-2">
-                        <p className="text-white/60 text-sm">
+                        <p className="text-sm opacity-80">
                           📍 {selectedPoint.location}
                         </p>
                       </div>
                     </CardContent>
                   </Card>
                 ) : (
-                  <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+                  <Card className="card-cultural">
                     <CardHeader>
-                      <CardTitle className="text-white">Selecciona un punto</CardTitle>
+                      <CardTitle>Selecciona un punto</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-white/70 text-sm">
+                      <p className="text-sm">
                         Haz clic en cualquier punto verde del mapa para ver información detallada sobre ese centro de reciclaje.
                       </p>
                     </CardContent>
@@ -204,10 +208,10 @@ export default function MapsPage() {
                 )}
 
                 {/* Leyenda */}
-                <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+                <Card className="card-cultural">
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
-                      <RecycleIcon className="h-5 w-5 text-emerald-400" />
+                    <CardTitle className="flex items-center gap-2">
+                      <RecycleIcon className="h-5 w-5 text-emerald-600" />
                       Tipos de Puntos
                     </CardTitle>
                   </CardHeader>
@@ -215,43 +219,43 @@ export default function MapsPage() {
                     <div className="space-y-2">
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
-                        <span className="text-white/80 text-sm">Puntos Principales</span>
+                        <span className="text-sm">Puntos Principales</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-teal-500"></div>
-                        <span className="text-white/80 text-sm">Puntos Familiares</span>
+                        <span className="text-sm">Puntos Familiares</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-fuchsia-500"></div>
-                        <span className="text-white/80 text-sm">Puntos Deportivos</span>
+                        <span className="text-sm">Puntos Deportivos</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <span className="text-white/80 text-sm">Puntos Comerciales</span>
+                        <span className="text-sm">Puntos Comerciales</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
                 {/* Consejos */}
-                <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+                <Card className="card-cultural">
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
-                      <LeafIcon className="h-5 w-5 text-emerald-400" />
+                    <CardTitle className="flex items-center gap-2">
+                      <LeafIcon className="h-5 w-5 text-emerald-600" />
                       Consejos Eco
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                    <p className="text-white/70 text-sm">
+                    <p className="text-sm">
                       • Separa los residuos antes de llegar
                     </p>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-sm">
                       • Limpia los envases de comida
                     </p>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-sm">
                       • Pregunta si tienes dudas
                     </p>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-sm">
                       • Comparte la ubicación con amigos
                     </p>
                   </CardContent>
@@ -259,9 +263,9 @@ export default function MapsPage() {
 
                 {/* Navegación */}
                 {selectedPoint && (
-                  <Card className="bg-white/5 border-white/15 backdrop-blur-sm">
+                  <Card className="card-cultural">
                     <CardHeader>
-                      <CardTitle className="text-white flex items-center gap-2">
+                      <CardTitle className="flex items-center gap-2">
                         🗺️ Cómo llegar
                       </CardTitle>
                     </CardHeader>
@@ -277,7 +281,7 @@ export default function MapsPage() {
                         📍 Abrir en Google Maps
                       </Button>
                       
-                      <div className="text-white/70 text-xs space-y-1">
+                      <div className="text-xs space-y-1 opacity-80">
                         <p>• Desde Plaza de Nariño: ~5-10 min caminando</p>
                         <p>• Transporte público disponible</p>
                         <p>• Estacionamiento limitado en eventos</p>
