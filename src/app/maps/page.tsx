@@ -166,7 +166,7 @@ export default function MapsPage() {
                         <p className="text-white font-medium mb-2">Materiales aceptados:</p>
                         <div className="flex flex-wrap gap-2">
                           {selectedPoint.materials.map((material) => {
-                            const Icon = materialIcons[material] || RecycleIcon;
+                            const Icon = materialIcons[material as keyof typeof materialIcons] || RecycleIcon;
                             return (
                               <Badge 
                                 key={material}
