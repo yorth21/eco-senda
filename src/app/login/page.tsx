@@ -52,7 +52,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen relative bg-black text-white">
+    <div className="min-h-screen relative text-white">
       <FestiveBackground />
       
       <div className="relative z-10">

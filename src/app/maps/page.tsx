@@ -88,7 +88,7 @@ export default function MapsPage() {
   const [selectedPoint, setSelectedPoint] = useState<typeof recyclingPoints[0] | null>(null);
 
   return (
-    <div className="min-h-screen relative bg-black text-white">
+    <div className="min-h-screen relative text-white">
       <FestiveBackground />
       
       <div className="relative z-10">

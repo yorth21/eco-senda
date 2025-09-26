@@ -39,7 +39,7 @@ export default function ChatBotDemo() {
   }, [messages]);
 
   return (
-    <div className="min-h-screen relative bg-black text-white">
+    <div className="min-h-screen relative text-white">
       <FestiveBackground />
       
       <div className="relative z-10 flex flex-col h-screen">
