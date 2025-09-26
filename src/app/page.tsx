@@ -111,10 +111,10 @@ export default function LandingPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold titulo-seccion mb-6">
                 ¿Cómo Te Puedo Ayudar?
               </h2>
-              <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              <p className="text-xl subtitulo-seccion max-w-2xl mx-auto">
                 Descubre todas las formas en que puedes hacer tu experiencia del carnaval más sostenible
               </p>
             </div>
@@ -164,10 +164,10 @@ export default function LandingPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold titulo-seccion mb-4">
                 Impacto del Carnaval Verde
               </h2>
-              <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              <p className="text-xl subtitulo-seccion max-w-2xl mx-auto">
                 Juntos estamos transformando la celebración más importante de Nariño
               </p>
             </div>
@@ -192,10 +192,10 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Card className="card-cultural border-artesanal">
               <CardContent className="p-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold titulo-seccion mb-6">
                   🎭 ¿Listo para un Carnaval Sostenible?
                 </h2>
-                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-medium">
+                <p className="text-xl subtitulo-seccion mb-8 max-w-2xl mx-auto font-medium">
                   Comienza a planificar tu experiencia eco-friendly. Pregúntame sobre reciclaje, 
                   transporte, puntos verdes y más consejos para disfrutar responsablemente.
                 </p>
