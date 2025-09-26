@@ -1,5 +1,8 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { UserIcon } from "lucide-react";
 
 export const CarnavalHeader = () => {
   return (
@@ -32,26 +35,41 @@ export const CarnavalHeader = () => {
             </div>
           </div>
 
-          {/* Badges de sostenibilidad */}
-          <div className="flex items-center space-x-2">
-            <Badge 
-              variant="secondary" 
-              className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30 backdrop-blur-sm hover:bg-emerald-500/30 transition-colors"
-            >
-              #MenosPlástico
-            </Badge>
-            <Badge 
-              variant="secondary" 
-              className="bg-teal-500/20 text-teal-300 border-teal-500/30 backdrop-blur-sm hover:bg-teal-500/30 transition-colors hidden sm:inline-flex"
-            >
-              #Reusa
-            </Badge>
-            <Badge 
-              variant="secondary" 
-              className="bg-yellow-400/20 text-yellow-300 border-yellow-400/30 backdrop-blur-sm hover:bg-yellow-400/30 transition-colors hidden md:inline-flex"
-            >
-              #Recicla
-            </Badge>
+          {/* Badges de sostenibilidad y Login */}
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
+              <Badge 
+                variant="secondary" 
+                className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30 backdrop-blur-sm hover:bg-emerald-500/30 transition-colors"
+              >
+                #MenosPlástico
+              </Badge>
+              <Badge 
+                variant="secondary" 
+                className="bg-teal-500/20 text-teal-300 border-teal-500/30 backdrop-blur-sm hover:bg-teal-500/30 transition-colors hidden sm:inline-flex"
+              >
+                #Reusa
+              </Badge>
+              <Badge 
+                variant="secondary" 
+                className="bg-yellow-400/20 text-yellow-300 border-yellow-400/30 backdrop-blur-sm hover:bg-yellow-400/30 transition-colors hidden lg:inline-flex"
+              >
+                #Recicla
+              </Badge>
+            </div>
+            
+            {/* Botón de Login */}
+            <Link href="/login">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 text-white backdrop-blur-sm transition-all duration-200"
+              >
+                <UserIcon className="h-4 w-4 mr-2" />
+                <span className="hidden sm:inline">Iniciar Sesión</span>
+                <span className="sm:hidden">Login</span>
+              </Button>
+            </Link>
           </div>
         </div>
 
