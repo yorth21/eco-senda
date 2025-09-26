@@ -131,10 +131,10 @@ export default function LandingPage() {
                           <div className="mx-auto mb-4 p-4 rounded-full bg-white/90 shadow-lg w-fit">
                             <Icon className={`h-8 w-8 ${feature.color.replace('text-', 'text-').replace('-400', '-600')}`} />
                           </div>
-                          <CardTitle className="text-white text-lg font-bold">{feature.title}</CardTitle>
+                          <CardTitle className="text-lg font-bold">{feature.title}</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
-                          <p className="text-white/90 text-sm leading-relaxed font-medium">{feature.description}</p>
+                          <p className="text-sm leading-relaxed font-medium">{feature.description}</p>
                           <p className="text-yellow-300 text-xs mt-3 font-bold">🎭 ¡Haz clic para explorar!</p>
                         </CardContent>
                       </Card>
@@ -148,10 +148,10 @@ export default function LandingPage() {
                       <div className="mx-auto mb-4 p-4 rounded-full bg-white/90 shadow-lg w-fit">
                         <Icon className={`h-8 w-8 ${feature.color.replace('text-', 'text-').replace('-400', '-600')}`} />
                       </div>
-                      <CardTitle className="text-white text-lg font-bold">{feature.title}</CardTitle>
+                      <CardTitle className="text-lg font-bold">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center">
-                      <p className="text-white/90 text-sm leading-relaxed font-medium">{feature.description}</p>
+                      <p className="text-sm leading-relaxed font-medium">{feature.description}</p>
                     </CardContent>
                   </Card>
                 );
@@ -179,7 +179,7 @@ export default function LandingPage() {
                     <div className="text-4xl sm:text-5xl font-bold text-gradient-cultural mb-3">
                       {stat.number}
                     </div>
-                    <div className="text-white font-semibold text-sm sm:text-base">{stat.label}</div>
+                    <div className="font-semibold text-sm sm:text-base">{stat.label}</div>
                   </div>
                 </div>
               ))}

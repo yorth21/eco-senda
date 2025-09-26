@@ -25,12 +25,9 @@ export const CarnavalHeader = () => {
               
               {/* Título principal */}
               <div className="hidden sm:block">
-                <h1 className="text-xl font-semibold text-white">
+                <h1 className="text-2xl font-bold text-gradient-cultural text-shadow-cultural">
                   Eco Senda
                 </h1>
-                <p className="text-sm text-white/70">
-                  Sostenibilidad para el Carnaval de Negros y Blancos
-                </p>
               </div>
             </div>
           </div>
@@ -75,14 +72,12 @@ export const CarnavalHeader = () => {
 
         {/* Título móvil */}
         <div className="sm:hidden pb-3">
-          <h1 className="text-lg font-semibold text-white">
+          <h1 className="text-xl font-bold text-gradient-cultural text-shadow-cultural">
             Eco Senda
           </h1>
         </div>
       </div>
 
-      {/* Decoración de confeti */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent"></div>
     </header>
   );
 };
