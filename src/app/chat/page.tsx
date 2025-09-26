@@ -42,7 +42,7 @@ export default function ChatBotDemo() {
     <div className="min-h-screen relative text-white">
       <FestiveBackground />
       
-      <div className="relative z-10 flex flex-col h-screen">
+      <div className="relative z-10 flex flex-col h-screen pt-20">
         <CarnavalHeader />
         
         <div className="flex-1 flex overflow-hidden">

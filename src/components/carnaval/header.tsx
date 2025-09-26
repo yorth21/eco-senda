@@ -6,7 +6,7 @@ import { UserIcon } from "lucide-react";
 
 export const CarnavalHeader = () => {
   return (
-    <header className="w-full border-b-4 border-artesanal bg-cultural-header backdrop-blur-md shadow-xl">
+    <header className="fixed top-0 left-0 right-0 w-full bg-cultural-header shadow-lg z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo y título */}

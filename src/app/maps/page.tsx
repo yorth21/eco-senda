@@ -94,6 +94,9 @@ export default function MapsPage() {
       <div className="relative z-10">
         <CarnavalHeader />
         
+        {/* Espaciado para el header fijo */}
+        <div className="h-20"></div>
+        
         {/* Header de la página */}
         <section className="pt-8 pb-6 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
