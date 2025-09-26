@@ -642,12 +642,144 @@
     border-color: #065f46;
   }
 
-  .floating-send-button:active {
-    transform: translateY(0px);
-    box-shadow: 
-      1px 1px 0px #065f46,
-      2px 2px 0px rgba(6, 95, 70, 0.3);
-  }
+    .floating-send-button:active {
+      transform: translateY(0px);
+      box-shadow: 
+        1px 1px 0px #065f46,
+        2px 2px 0px rgba(6, 95, 70, 0.3);
+    }
+
+    /* Dashboard Cel Shading Styles */
+    .cel-badge {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      border: 2px solid #b45309;
+      border-radius: 12px;
+      box-shadow: 
+        3px 3px 0px #b45309,
+        6px 6px 0px rgba(180, 83, 9, 0.3);
+      color: white;
+      font-weight: 700;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .cel-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 
+        4px 4px 0px #b45309,
+        8px 8px 0px rgba(180, 83, 9, 0.3);
+    }
+
+    /* Dashboard specific button styles */
+    .dashboard .cel-button {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      border: 3px solid #1e3a8a;
+      border-radius: 12px;
+      box-shadow: 
+        4px 4px 0px #1e3a8a,
+        8px 8px 0px rgba(30, 58, 138, 0.3);
+      color: white;
+      font-weight: 600;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+      transform: translateY(0px);
+    }
+
+    .dashboard .cel-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        6px 6px 0px #1e3a8a,
+        10px 10px 0px rgba(30, 58, 138, 0.3);
+    }
+
+    .dashboard .cel-button:active {
+      transform: translateY(0px);
+      box-shadow: 
+        2px 2px 0px #1e3a8a,
+        4px 4px 0px rgba(30, 58, 138, 0.3);
+    }
+
+    /* Progress bar cel shading */
+    .dashboard .progress-cel {
+      background: linear-gradient(135deg, #e5e0c3 0%, #d6d1b4 100%);
+      border: 2px solid #8b7355;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 
+        2px 2px 0px #8b7355,
+        4px 4px 0px rgba(139, 115, 85, 0.3);
+    }
+
+    .dashboard .progress-cel .progress-fill {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border-right: 2px solid #065f46;
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    /* Challenge category indicators */
+    .category-reciclaje {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: 2px solid #065f46;
+    }
+
+    .category-carnaval {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      border: 2px solid #991b1b;
+    }
+
+    .category-sostenibilidad {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      border: 2px solid #1e3a8a;
+    }
+
+    .category-cultura {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      border: 2px solid #5b21b6;
+    }
+
+    /* Animated elements */
+    @keyframes cel-bounce-in {
+      0% {
+        transform: scale(0.8) translateY(10px);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.05) translateY(-5px);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    .animate-cel-bounce-in {
+      animation: cel-bounce-in 0.5s ease-out;
+    }
+
+    /* Level indicator */
+    .level-indicator {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      border: 3px solid #b45309;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 
+        4px 4px 0px #b45309,
+        8px 8px 0px rgba(180, 83, 9, 0.3);
+      color: white;
+      font-weight: 800;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+      font-size: 1.25rem;
+    }
 
   .cel-sidebar {
     background: linear-gradient(180deg, #e5e0c3 0%, #d6d1b4 100%);

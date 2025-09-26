@@ -43,7 +43,7 @@ export default function LoginPage() {
       }));
       
       // Redireccionar al dashboard o página principal
-      router.push("/");
+      router.push("/dashboard");
     } else {
       setError("Credenciales incorrectas. Verifica tu email y contraseña.");
     }

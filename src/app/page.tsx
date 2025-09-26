@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRightIcon, LeafIcon, RecycleIcon, UsersIcon, SparklesIcon } from "lucide-react";
+import { ChevronRightIcon, LeafIcon, RecycleIcon, UsersIcon, SparklesIcon, TrophyIcon } from "lucide-react";
 import { CarnavalHeader } from "@/components/carnaval/header";
 import { FestiveBackground } from "@/components/carnaval/festive-background";
 import { Button } from "@/components/ui/button";
@@ -29,6 +29,13 @@ export default function LandingPage() {
       title: "Cultura Responsable",
       description: "Celebra respetando nuestras tradiciones y el medio ambiente",
       color: "text-yellow-400"
+    },
+    {
+      icon: TrophyIcon,
+      title: "Retos Sostenibles",
+      description: "Completa desafíos ecológicos y gana puntos mientras aprendes",
+      color: "text-purple-400",
+      link: "/dashboard"
     }
   ];
 
