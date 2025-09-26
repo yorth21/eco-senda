@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export const CarnavalHeader = () => {
   return (
@@ -7,24 +8,22 @@ export const CarnavalHeader = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo y título */}
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              {/* Logo tipográfico N&B */}
+            <div className="flex items-center space-x-3">
+              {/* Logo de la empresa */}
               <div className="relative">
-                <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  N
-                </span>
-                <span className="text-2xl font-bold text-black bg-white rounded-sm px-1 ml-1">
-                  &
-                </span>
-                <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent ml-1">
-                  B
-                </span>
+                <Image
+                  src="/images/logo.png"
+                  alt="Eco Senda Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-lg"
+                />
               </div>
               
               {/* Título principal */}
               <div className="hidden sm:block">
                 <h1 className="text-xl font-semibold text-white">
-                  Guía Verde · Carnaval N&B
+                  Eco Senda
                 </h1>
                 <p className="text-sm text-white/70">
                   Sostenibilidad para el Carnaval de Negros y Blancos
@@ -59,7 +58,7 @@ export const CarnavalHeader = () => {
         {/* Título móvil */}
         <div className="sm:hidden pb-3">
           <h1 className="text-lg font-semibold text-white">
-            Guía Verde · Carnaval N&B
+            Eco Senda
           </h1>
         </div>
       </div>

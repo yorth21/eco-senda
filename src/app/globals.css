@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "leaflet/dist/leaflet.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -247,6 +248,36 @@
     outline: 2px solid #10b981;
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  }
+
+  /* Estilos para React Leaflet */
+  .leaflet-container {
+    border-radius: 12px;
+  }
+  
+  .leaflet-container-dark {
+    filter: brightness(0.8) contrast(1.2) saturate(0.8);
+  }
+  
+  .custom-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .leaflet-popup-tip {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    margin: 0;
+    border-radius: 8px;
   }
 
   /* Scrollbar personalizado para el chat */
