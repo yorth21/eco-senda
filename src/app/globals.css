@@ -120,3 +120,132 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Carnaval N&B + Guía Verde - Estilos personalizados */
+@layer utilities {
+  /* Animaciones del confeti y elementos festivos */
+  @keyframes float-1 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+  }
+  
+  @keyframes float-2 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(90deg); }
+  }
+  
+  @keyframes float-3 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(270deg); }
+  }
+  
+  @keyframes float-4 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(45deg); }
+  }
+  
+  @keyframes float-5 {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-9px) scale(1.1); }
+  }
+  
+  @keyframes float-6 {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-11px) scale(0.9); }
+  }
+  
+  @keyframes float-7 {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-7px) rotate(180deg) scale(1.2); }
+  }
+  
+  @keyframes float-8 {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-13px) rotate(-90deg) scale(0.8); }
+  }
+  
+  @keyframes wiggle-1 {
+    0%, 100% { d: path("M10,5 Q15,10 20,5 T30,5 T40,5"); }
+    50% { d: path("M10,5 Q15,0 20,5 T30,5 T40,5"); }
+  }
+  
+  @keyframes wiggle-2 {
+    0%, 100% { d: path("M70,95 Q75,90 80,95 T90,95 T100,95"); }
+    50% { d: path("M70,95 Q75,100 80,95 T90,95 T100,95"); }
+  }
+  
+  @keyframes wiggle-3 {
+    0%, 100% { d: path("M0,50 Q5,45 10,50 T20,50 T30,50"); }
+    50% { d: path("M0,50 Q5,55 10,50 T20,50 T30,50"); }
+  }
+  
+  @keyframes wiggle-4 {
+    0%, 100% { d: path("M70,25 Q75,20 80,25 T90,25 T100,25"); }
+    50% { d: path("M70,25 Q75,30 80,25 T90,25 T100,25"); }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Aplicar animaciones */
+  .animate-float-1 { animation: float-1 3s ease-in-out infinite; }
+  .animate-float-2 { animation: float-2 4s ease-in-out infinite; }
+  .animate-float-3 { animation: float-3 2.5s ease-in-out infinite; }
+  .animate-float-4 { animation: float-4 3.5s ease-in-out infinite; }
+  .animate-float-5 { animation: float-5 4s ease-in-out infinite; }
+  .animate-float-6 { animation: float-6 3s ease-in-out infinite; }
+  .animate-float-7 { animation: float-7 3.5s ease-in-out infinite; }
+  .animate-float-8 { animation: float-8 4.5s ease-in-out infinite; }
+  
+  .animate-wiggle-1 { animation: wiggle-1 8s ease-in-out infinite; }
+  .animate-wiggle-2 { animation: wiggle-2 6s ease-in-out infinite; }
+  .animate-wiggle-3 { animation: wiggle-3 7s ease-in-out infinite; }
+  .animate-wiggle-4 { animation: wiggle-4 9s ease-in-out infinite; }
+  
+  .animate-fade-in-up { animation: fade-in-up 0.5s ease-out; }
+  .animate-fade-in-scale { animation: fade-in-scale 0.3s ease-out; }
+
+  /* Gradientes radiales para el fondo */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Utilidades de glassmorphism */
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Estados de focus mejorados para accesibilidad */
+  .focus-visible-strong:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  }
+}
